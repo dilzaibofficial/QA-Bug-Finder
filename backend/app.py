@@ -12,7 +12,11 @@ from routes.history  import history_bp
 from routes.settings import settings_bp
 
 app = Flask(__name__)
-CORS(app, supports_credentials=True)
+CORS(app,
+     supports_credentials=True,
+     origins=["http://localhost:3000",
+              "https://qa-bug-finder.vercel.app",
+              "https://qa-bug-finder-rmeblt60y-dil-zaibs-projects.vercel.app"])
 
 app.register_blueprint(auth_bp,      url_prefix="/api/auth")
 app.register_blueprint(upload_bp,    url_prefix="/api/upload")

@@ -4,7 +4,8 @@ from pathlib import Path
 import os, sys, uuid, shutil, zipfile, tempfile
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
-sys.path.insert(0, r"d:\Zainab FYP\model_training")
+# model_training is one level up from backend/
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "model_training"))
 
 from db import get_db
 import config
