@@ -678,6 +678,7 @@ function Reports() {
 function generateCorrectCode(bug) {
   const line = bug.code_snippet || "";
   const type = (bug.type || "").toLowerCase();
+  // eslint-disable-next-line no-unused-vars
   const sev  = (bug.severity || "").toLowerCase();
 
   // Try to generate a meaningful suggestion based on bug type
