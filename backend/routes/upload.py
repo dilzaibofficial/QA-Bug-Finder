@@ -3,9 +3,11 @@ from datetime import datetime
 from pathlib import Path
 import os, sys, uuid, shutil, zipfile, tempfile
 
-sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
-# model_training is one level up from backend/
-sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "model_training"))
+_backend_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # backend/
+_project_dir = os.path.dirname(_backend_dir)                                  # repo root
+_model_dir   = os.path.join(_project_dir, "model_training")
+sys.path.insert(0, _backend_dir)
+sys.path.insert(0, _model_dir)
 
 from db import get_db
 import config
