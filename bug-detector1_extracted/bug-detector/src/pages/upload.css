@@ -1,0 +1,90 @@
+/* center whole upload section */
+.upload-container{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  margin-top:50px;
+}
+
+/* box stays same */
+.upload-box{
+  margin: auto;
+  text-align: center;
+  padding: 50px;
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  width: 600px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* 🔥 center horizontally */
+  justify-content: center;
+}
+
+.upload-box h3{
+  border-bottom: 2px solid #cecfcf;
+  position: relative;
+  margin-bottom: 15px;
+  padding-bottom: 8px;
+  display: inline-block;   /* 🔥 important */
+}
+
+.upload-box h3::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;            /* 🔥 full width */
+  height: 3px;
+  /* background: #1f4c7c; */
+  border-radius: 5px;
+}
+
+/* paragraph styling */
+.upload-box p{
+  font-size: 13px;
+  font-weight: 300;
+  color: #666;
+  font-family: "Segoe UI", sans-serif;
+  margin-top: 5px;
+}
+
+/* if "Browse" is inside text or span */
+.upload-box span{
+  font-size: 13px;
+  font-weight: 300;
+  color: #1f4c7c;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* icon */
+.cloud-icon{
+  font-size: 60px;
+  color: #6c757d;
+  margin-bottom: 15px;
+}
+
+/* button wrapper (outside box) */
+.upload-btn-wrapper{
+  margin-top:20px;
+}
+
+/* button styling */
+.upload-btn-wrapper button{
+  padding:12px 30px;
+  background:#1f4c7c;
+  color:white;
+  border:none;
+  border-radius:6px;
+  cursor:pointer;
+  font-size:14px;
+  font-weight:500;
+
+  transition: all 0.3s ease;
+}
+
+/* hover */
+.upload-btn-wrapper button:hover{
+  background:#16395d;
+  transform: translateY(-2px);
+}

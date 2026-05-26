@@ -1,0 +1,494 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:sans-serif;
+}
+
+/* MAIN */
+.main{
+  flex:1;
+  background:#f5f7fb;
+  padding:10px;
+  overflow-x:auto;
+}
+
+/* =======================
+   CARDS SECTION
+======================= */
+.cards{
+  display:flex;
+  gap:20px;
+  flex-wrap: wrap;
+}
+
+/* CARD (ONLY ONE CLEAN VERSION) */
+.card{
+  background:white;
+  padding:20px;
+  border-radius:10px;
+  flex:1 1 300px;
+  max-width:350px;
+  /* box-shadow:0 2px 10px rgba(0,0,0,0.08); */
+  min-height: 200px;
+  height:auto;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);  /* 🔥 dark shadow */
+  margin:10px 5px;
+  border: 1px solid #d3d4d4;
+  transition: all 0.3s ease;
+}
+
+/* CARD HOVER */
+.card:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  background:#fafafa;
+}
+
+/* CARD HEADER */
+.card-header{
+  display:flex;
+  justify-content:space-between;
+  font-weight:bold;
+  font-size:large;
+}
+
+/* ICONS */
+.icon{
+  width:35px;
+  height:35px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;
+}
+
+.green{background:#0e7a3f;}
+.blue{background:#1667a8;}
+.red{background:#c00d0d;}
+
+/* PROGRESS */
+.progress{
+  height:5px;
+  background:#ddd;
+  margin-top:10px;
+  border-radius:5px;
+  overflow:hidden;
+}
+
+.progress div{
+  height:100%;
+  border-radius:5px;
+}
+
+.green-bar{
+  background:#0e7a3f !important;
+}
+.blue-bar{
+  background:#1667a8 !important;
+}
+.red-bar{
+  background:#c00d0d !important;
+}
+/* DIVIDER LINE */
+.divider{
+  height:1px;
+  background:#e0e0e0;
+  margin:20px 0 12px 0; /* 🔥 upar zyada space */
+}
+
+/* CARD FOOTER */
+.card-footer{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-size:16px;      /* 🔥 size bara */
+  font-weight:600;     /* 🔥 bold */
+  cursor:pointer;
+  transition: all 0.3s ease;
+}
+
+/* Arrow alag se aur prominent */
+.arrow{
+  font-size:18px;      /* 🔥 arrow thora bara */
+  font-weight:700;
+  transition: transform 0.3s ease;
+}
+
+/* hover pe move */
+.card-footer:hover .arrow{
+  transform: translateX(6px);
+}
+
+/* =======================
+   TABLE
+======================= */
+.table-box{
+  margin-top:15px;
+  background:white;
+  padding:20px;
+  border-radius:10px;
+  overflow-x:auto;
+   box-shadow: 0 6px 18px rgba(0,0,0,0.12); 
+  transition: all 0.3s ease;
+
+}
+
+/* TABLE HOVER */
+.table-box:hover{
+  background:#f9f9f9;
+  box-shadow:0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* TABLE */
+table{
+  width:100%;
+  margin-top:10px;
+  border-collapse: collapse;
+}
+
+th, td{
+  padding:10px;
+  border-bottom:1px solid #eee;
+  text-align:left;
+}
+
+/* HEADER STYLE */
+thead tr{
+  background:#eeeef0;
+}
+
+th{
+  color:#1f4c7c;
+  font-weight:600;
+  border-bottom:2px solid #e0e0e0;
+}
+
+/* ROW HOVER */
+tr{
+  transition: all 0.2s ease;
+}
+
+tr:hover{
+  background:#f5f7fb;
+  cursor:pointer;
+}
+
+/* =======================
+   BADGES
+======================= */
+.badge{
+  padding:5px 10px;
+  border-radius:5px;
+  font-size:14px;
+}
+
+.badge.green{
+  background:#07b969;
+  color:#f4f5f7;
+}
+
+.badge.yellow{
+  background:#eec249;
+  color:#f4f5f7;
+}
+
+/* =======================
+   HEADING UNDERLINE
+======================= */
+.table-box h3{
+  /* position:relative; */
+  border-bottom: 2px solid #cecfcf;
+  padding-bottom:8px;
+  margin-bottom:15px;
+}
+
+.table-box h3::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:0;
+  width:80px;
+  height:3px;
+  background:#1f4c7c;
+  border-radius:5px;
+}
+
+/* =======================
+   RESPONSIVE
+======================= */
+@media(max-width:768px){
+  .cards{
+    flex-direction:column;
+  }
+}
+
+/* 1st card - GREEN */
+.cards .card:nth-child(1) .card-footer{
+  color:#0e7a3f;
+}
+
+.cards .card:nth-child(1) .card-footer:hover{
+  color:#095c2f;
+}
+
+
+/* 2nd card - BLUE */
+.cards .card:nth-child(2) .card-footer{
+  color:#1667a8;
+}
+
+.cards .card:nth-child(2) .card-footer:hover{
+  color:#0f4e7d;
+}
+
+
+/* 3rd card - RED */
+.cards .card:nth-child(3) .card-footer{
+  color:#c00d0d;
+}
+
+.cards .card:nth-child(3) .card-footer:hover{
+  color:#8f0909;
+}
+
+/* =======================
+   WORKFLOW BOX (FIXED)
+======================= */
+.workflow-box{
+  margin-top:15px;
+  background:white;
+  padding:25px;
+  border-radius:10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  border: 1px solid #d3d4d4;
+}
+
+/* HEADER FIX */
+.workflow-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;   /* 🔥 FIX */
+}
+
+.workflow-header h3{
+  font-size:20px;
+  font-weight:600;
+}
+
+.workflow-header p{
+  font-size:16px;
+  color:#6b7280;
+  margin-top:5px;
+  max-width:500px;   /* 🔥 width control */
+}
+
+/* BUTTON FIX */
+.hide-btn{
+  background:#1667a8;
+  border:none;
+  padding:6px 10px;
+  border-radius:3px;
+  cursor:pointer;
+  font-size:12px;
+  white-space:nowrap;  /* 🔥 FIX */
+  width: 100px;
+}
+
+/* =======================
+   STEP LINE (PERFECT ALIGN)
+======================= */
+.steps-line{
+  display:grid;
+  grid-template-columns: repeat(7, 1fr);
+  align-items:center;
+  margin:30px 0 20px;
+}
+
+.step-top{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+}
+
+/* 🔥 SVG ARROW */
+.arrow-svg{
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform:translateY(-50%);
+  width:100%;        /* 🔥 full center-to-center */
+  height:10px;
+  z-index:1;
+}
+
+/* circle upar rahe */
+.step-number{
+  position:relative;
+  z-index:2;
+}
+
+/* numbers */
+.step-number{
+  width:30px;
+  height:30px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;
+  font-size:13px;
+  font-weight:bold;
+  margin:auto;
+  z-index:1;
+}
+
+/* COLORS */
+.step-1{background:#0bc0d8;}
+.step-2{background:#f8dc3d;}
+.step-3{background:#fd8e3e;}
+.step-4{background:#26d667;}
+.step-5{background:#e6308b;}
+.step-6{background:#8a3ba1;}
+.step-7{background:#f34e4e;}
+
+/* =======================
+   STEP CONTENT (COLUMN STYLE)
+======================= */
+.steps-cards{
+  display:grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap:0; /* important: line gap clean karne ke liye */
+  text-align:center;
+}
+
+/* REMOVE CARD LOOK */
+.step-card{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:flex-start;
+  padding:10px 10px;
+  position:relative;
+  height:100%;
+}
+.step-card:not(:last-child)::after{
+  content:"";
+  position:absolute;
+  right:0;
+  top:20px;        /* sirf icon + text area se start */
+  bottom:20px;
+  width:1px;
+  background:#d1d5db;   /* light grey line */
+}
+
+/* ICON */
+.icon-box{
+  width:55px;
+  height:55px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin:10px auto;
+  font-size:22px;
+  color:white;
+}
+
+/* ICON COLORS (SAFE) */
+.icon-blue{background:#0bc0d8;}
+.icon-green{background:#f8dc3d;}
+.icon-orange{background:#fd8e3e;}
+.icon-purple{background:#26d667;}
+.icon-pink{background:#e6308b;}
+.icon-teal{background:#8a3ba1;}
+.icon-darkblue{background:#f34e4e;}
+
+/* TITLE */
+.step-card h4{
+  font-size:16px;
+  font-weight:600;
+  margin:8px 0;
+
+  min-height: 40px;   /* 🔥 same space for all headings */
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+.step-card p{
+  font-size:14px;
+  color:#6b7280;
+  /* margin:0; */
+  margin-top: 20px;
+  min-height: 45px;   /* 🔥 equal space */
+  display:flex;
+  align-items:flex-start;
+  justify-content:center;
+  text-align:center;
+}
+
+/* TEXT */
+.step-card p,
+.step-card ul{
+  font-size:14px;
+  color:#6b7280;
+}
+
+.step-card ul{
+  list-style:none;
+  padding:0;
+}
+
+/* =======================
+   SMART BOX (FIXED LOOK)
+======================= */
+.smart-box{
+  margin-top:20px;
+  background:#f1f5ff;  /* 🔥 softer */
+  padding:20px;
+  border-radius:12px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border:1px solid #d3e5fd;
+}
+
+.smart-left{
+  display:flex;
+  gap:15px;
+  align-items:flex-start;
+}
+
+/* ICON */
+.info-icon{
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  background:#3b82f6;
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:bold;
+  font-size:18px;
+}
+
+/* TEXT FIX */
+.smart-left h4{
+  font-size:15px;
+  margin-bottom:4px;
+}
+
+.smart-left p{
+  font-size:13px;
+  color:#6b7280;
+  max-width:500px;
+}
+
+/* RIGHT SIDE ICON */
+.smart-right{
+  font-size:50px;
+}

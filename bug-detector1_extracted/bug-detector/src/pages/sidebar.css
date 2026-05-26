@@ -1,0 +1,86 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+/* MAIN LAYOUT */
+.layout {
+  display: flex;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 230px;
+  height: 100vh;
+  background: linear-gradient(180deg, #1f4c7c, #16395d);
+  color: white;
+  padding: 20px;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+/* RIGHT SIDE */
+.main-area {
+  margin-left: 230px;
+  width: calc(100% - 230px);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* TOPBAR (FIXED INSIDE RIGHT AREA) */
+.topbar {
+  height: 70px;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  border-bottom: 1px solid #eee;
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* CONTENT */
+.content {
+  flex: 1;              /* takes remaining space */
+  overflow-y: auto;     /* scroll sirf content me hoga */
+  background: #f5f6fa;
+  padding: 20px;        /* optional but makes UI clean */
+}
+
+/* LOGO */
+.logo {
+  margin-bottom: 25px;
+}
+
+/* MENU */
+.menu-item {
+  padding: 12px 15px;
+  margin: 8px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #cfd8dc;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.menu-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.menu-item.active {
+  background: linear-gradient(90deg, #1e90ff, #00c6ff);
+  color: white;
+}
+
+.logout {
+  margin-top: 20px;
+  color: #ff6b6b;
+}

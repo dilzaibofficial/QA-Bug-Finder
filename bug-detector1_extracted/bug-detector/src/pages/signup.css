@@ -1,0 +1,129 @@
+/* FULL SCREEN */
+.signup-wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0d355f;
+  font-family: Arial;
+}
+
+/* MAIN CARD */
+.signup-box {
+  display: flex;
+  width: 850px;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* LEFT SIDE */
+.signup-left {
+  flex: 1;
+  background: linear-gradient(180deg, #1f4c7c, #16395d);
+  color: white;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.signup-left h1 {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.signup-left p {
+  font-size: 14px;
+  line-height: 1.7;
+  opacity: 0.9;
+}
+
+/* RIGHT SIDE */
+.signup-right {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.signup-right h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* INPUTS */
+.signup-right input {
+  padding: 12px;
+  margin-bottom: 14px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.signup-right input:focus {
+  border-color: #2c6ce4;
+}
+
+/* PASSWORD BOX (for eye icon support) */
+.password-box {
+  position: relative;
+}
+
+.password-box input {
+  width: 100%;
+}
+
+.password-box span {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  cursor: pointer;
+  color: gray;
+}
+
+/* BUTTON */
+.signup-right button {
+  padding: 12px;
+  background: #2c6ce4;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.signup-right button:hover {
+  background: #1f5bd6;
+}
+
+/* SOCIAL TEXT */
+.social-text {
+  text-align: center;
+  font-size: 13px;
+  color: gray;
+  margin-top: 15px;
+}
+
+.social-text span {
+  color: #2c6ce4;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* LOGIN TEXT */
+.login-text {
+  margin-top: 15px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.login-text span {
+  color: #2c6ce4;
+  cursor: pointer;
+  font-weight: bold;
+}

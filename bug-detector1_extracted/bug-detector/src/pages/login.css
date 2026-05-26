@@ -1,0 +1,131 @@
+.login-container {
+  display: flex;
+  height: 100vh;
+  background: #0d355f;
+  color: white;
+   padding: 80px;
+}
+
+.left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+   padding: 30px;
+}
+
+.left h1 {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.left p {
+  font-size: 26px;
+  line-height: 1.9;
+}
+
+.faded-line {
+  border: none;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    #fcf9f9,
+    transparent
+  );
+  margin: 20px 0;
+}
+
+.right {
+  flex: 1;
+  background: white;
+  color: rgb(122, 122, 122);
+  margin: auto;
+  padding: 30px;
+  border-radius: 10px;
+
+  width: 100%;
+  max-width: 420px;   /* laptop ke liye proper size */
+  min-width: 300px;   /* chhoti screen pe too small na ho */
+}
+
+.right h2 {
+  text-align: center;
+  margin-bottom: 50px;
+  color: #000;
+  font-size: 32px;
+}
+
+.right input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+.right button {
+  width: 100%;
+  padding: 10px;
+  background: #2c6ce4;
+  color: white;
+  border: none;
+  margin: 20px 0;
+  font-size: 18px;
+}
+
+.forgot {
+  text-align: center;
+  font-size: 12px;
+  color: #2c6ce4;
+  font-size: 12px;
+}
+
+.signup-text{
+  text-align:center;
+  margin-top:15px;
+  font-size:16px;
+}
+
+.signup-text span{
+  color:#2c6ce4;
+  cursor:pointer;
+  font-weight:bold;
+}
+/* ERROR BOX */
+.error-box {
+  background: #ffe5e5;
+  color: #d8000c;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  animation: shake 0.3s ease;
+}
+
+/* INPUT ERROR */
+.error-input {
+  border: 2px solid red;
+}
+
+/* SHAKE ANIMATION */
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+.password-box {
+  position: relative;
+}
+
+.password-box input {
+  width: 100%;
+}
+
+.password-box span {
+  position: absolute;
+  right: 12px;
+  top: 15px;
+  cursor: pointer;
+  color: gray;
+}
