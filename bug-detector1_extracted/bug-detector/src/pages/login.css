@@ -129,3 +129,57 @@
   cursor: pointer;
   color: gray;
 }
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 900px) {
+  .login-container {
+    padding: 40px 30px;
+  }
+
+  .left h1 {
+    font-size: 36px;
+  }
+
+  .left p {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .login-container {
+    flex-direction: column;
+    padding: 30px 20px;
+    overflow-y: auto;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .left {
+    display: none;
+  }
+
+  .right {
+    width: 100%;
+    max-width: 420px;
+    min-width: unset;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-container {
+    padding: 20px 14px;
+  }
+
+  .right {
+    padding: 24px 18px;
+    border-radius: 8px;
+  }
+
+  .right h2 {
+    font-size: 26px;
+    margin-bottom: 30px;
+  }
+}

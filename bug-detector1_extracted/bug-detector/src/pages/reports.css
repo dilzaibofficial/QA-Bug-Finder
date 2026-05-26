@@ -386,3 +386,83 @@ color: #d4b00d;}
   width:45px;
 }
 
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 768px) {
+
+  /* top row: search + action buttons stacked */
+  .top-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .top-box {
+    width: 100%;
+    height: auto;
+  }
+
+  .actions {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .btn.blue,
+  .btn.light {
+    width: 100%;
+    height: 44px;
+  }
+
+  /* file info box stacked */
+  .file-box {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .stats {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .stat {
+    min-width: 140px;
+    flex: 1 1 140px;
+  }
+
+  /* filters wrap */
+  .filters-box {
+    flex-wrap: wrap;
+    height: auto;
+    gap: 8px;
+    padding: 12px;
+  }
+
+  .filters-box select,
+  .filters-box input {
+    width: 100%;
+    margin: 0;
+  }
+
+  .clear-btn {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  /* active bar wraps */
+  .active-bar {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .file-left {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .stat.green {
+    width: 100%;
+  }
+}
+

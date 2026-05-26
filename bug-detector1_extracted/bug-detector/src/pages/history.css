@@ -284,6 +284,79 @@
   font-weight: 600;
 }
 
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 900px) {
+  .history-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .h-card-a,
+  .h-card-b,
+  .h-card-c {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .history-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .h-card-a,
+  .h-card-b,
+  .h-card-c {
+    width: 100%;
+    margin: 0;
+  }
+
+  /* filters wrap */
+  .history-filters {
+    flex-wrap: wrap;
+    height: auto;
+    gap: 8px;
+    padding: 12px;
+    margin: 10px 0;
+  }
+
+  .search-box,
+  .date-box {
+    flex: 1 1 160px;
+  }
+
+  .history-filters select {
+    flex: 1 1 130px;
+  }
+
+  .clear-btn {
+    width: 100%;
+  }
+
+  /* table outer */
+  .table-outer {
+    height: auto;
+    max-height: 420px;
+  }
+}
+
+@media (max-width: 480px) {
+  .history-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .history-filters {
+    flex-direction: column;
+  }
+
+  .search-box,
+  .date-box,
+  .history-filters select {
+    width: 100%;
+  }
+}
+
 /* PROGRESS */
 .progress-bar {
   width: 80px;

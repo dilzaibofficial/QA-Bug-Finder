@@ -88,3 +88,28 @@
   background:#16395d;
   transform: translateY(-2px);
 }
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 768px) {
+  .upload-container {
+    margin-top: 20px;
+    padding: 0 10px;
+  }
+
+  .upload-box {
+    width: 100%;
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .upload-box {
+    padding: 24px 14px;
+  }
+
+  .cloud-icon {
+    font-size: 44px;
+  }
+}

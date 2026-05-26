@@ -76,3 +76,34 @@
 .btn:hover {
   background: #0056b3;
 }
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 768px) {
+  .settings-tabs {
+    gap: 20px;
+    font-size: 16px;
+    flex-wrap: wrap;
+  }
+
+  .settings-content {
+    flex-direction: column;
+  }
+
+  .card1,
+  .card2 {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .settings-tabs {
+    gap: 14px;
+    font-size: 14px;
+  }
+
+  .settings-container {
+    padding: 14px;
+  }
+}

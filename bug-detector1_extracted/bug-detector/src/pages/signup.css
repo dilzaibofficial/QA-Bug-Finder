@@ -127,3 +127,45 @@
   cursor: pointer;
   font-weight: bold;
 }
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 900px) {
+  .signup-box {
+    width: 96%;
+  }
+}
+
+@media (max-width: 768px) {
+  .signup-wrapper {
+    align-items: flex-start;
+    padding: 30px 16px;
+    overflow-y: auto;
+  }
+
+  .signup-box {
+    flex-direction: column;
+    width: 100%;
+    max-width: 420px;
+    margin: auto;
+  }
+
+  .signup-left {
+    display: none;
+  }
+
+  .signup-right {
+    padding: 30px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .signup-wrapper {
+    padding: 16px 10px;
+  }
+
+  .signup-right {
+    padding: 24px 16px;
+  }
+}

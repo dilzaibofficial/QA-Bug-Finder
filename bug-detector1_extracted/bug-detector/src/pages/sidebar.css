@@ -19,6 +19,8 @@ body {
   position: fixed;
   left: 0;
   top: 0;
+  z-index: 200;
+  transition: transform 0.3s ease;
 }
 
 /* RIGHT SIDE */
@@ -47,10 +49,10 @@ body {
 
 /* CONTENT */
 .content {
-  flex: 1;              /* takes remaining space */
-  overflow-y: auto;     /* scroll sirf content me hoga */
+  flex: 1;
+  overflow-y: auto;
   background: #f5f6fa;
-  padding: 20px;        /* optional but makes UI clean */
+  padding: 20px;
 }
 
 /* LOGO */
@@ -83,4 +85,63 @@ body {
 .logout {
   margin-top: 20px;
   color: #ff6b6b;
+}
+
+/* HAMBURGER BUTTON — hidden on desktop */
+.hamburger-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #1f4c7c;
+  padding: 4px 6px;
+  line-height: 1;
+}
+
+/* OVERLAY — hidden by default */
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 150;
+}
+
+/* =====================
+   RESPONSIVE — MOBILE
+===================== */
+@media (max-width: 768px) {
+
+  .sidebar {
+    transform: translateX(-100%);
+    width: 220px;
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .sidebar-overlay.open {
+    display: block;
+  }
+
+  .main-area {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .hamburger-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .topbar {
+    padding: 0 15px;
+  }
+
+  .content {
+    padding: 12px;
+  }
 }

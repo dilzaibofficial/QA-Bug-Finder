@@ -218,9 +218,101 @@ tr:hover{
 /* =======================
    RESPONSIVE
 ======================= */
-@media(max-width:768px){
-  .cards{
-    flex-direction:column;
+@media (max-width: 768px) {
+
+  .cards {
+    flex-direction: column;
+  }
+
+  .card {
+    max-width: 100%;
+    flex: 1 1 100%;
+    margin: 8px 0;
+  }
+
+  /* workflow header stack */
+  .workflow-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .workflow-header p {
+    max-width: 100%;
+  }
+
+  /* steps: 7-col grid → single column stacked */
+  .steps-line {
+    grid-template-columns: 1fr;
+    margin: 15px 0 10px;
+    gap: 12px;
+  }
+
+  .step-top {
+    justify-content: flex-start;
+    padding-left: 10px;
+  }
+
+  .arrow-svg {
+    display: none;
+  }
+
+  .steps-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .step-card {
+    align-items: flex-start;
+    text-align: left;
+    padding: 10px 15px;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .step-card:not(:last-child)::after {
+    display: none;
+  }
+
+  .step-card h4 {
+    min-height: unset;
+    text-align: left;
+    justify-content: flex-start;
+  }
+
+  .step-card p {
+    min-height: unset;
+    text-align: left;
+    justify-content: flex-start;
+    margin-top: 6px;
+  }
+
+  /* smart box stack */
+  .smart-box {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .smart-left {
+    flex-direction: column;
+  }
+
+  .smart-right {
+    font-size: 36px;
+    text-align: center;
+  }
+
+  /* table scroll on mobile already works via overflow-x:auto */
+  .main {
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .workflow-box {
+    padding: 15px;
+  }
+
+  .hide-btn {
+    width: auto;
+    padding: 6px 12px;
   }
 }
 
