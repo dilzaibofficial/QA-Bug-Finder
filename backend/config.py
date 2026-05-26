@@ -1,9 +1,9 @@
 import os
 
-MONGO_URI   = "mongodb://localhost:27017"
+MONGO_URI   = os.environ.get("MONGO_URI", "mongodb://localhost:27017")
 DB_NAME     = "bug_detector"
 UPLOAD_DIR  = os.path.join(os.path.dirname(os.path.dirname(__file__)), "uploads")
-SECRET_KEY  = "fyp_bug_detector_secret_2026"
+SECRET_KEY  = os.environ.get("SECRET_KEY", "fyp_bug_detector_secret_2026")
 MAX_FILE_MB = 50
 
 ALLOWED_EXT = {'.zip', '.java', '.py', '.js', '.ts',
