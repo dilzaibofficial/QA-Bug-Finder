@@ -1,5 +1,19 @@
 import sys
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
+# ── Pickle compatibility shim ──────────────────────────────────────────────
+# sklearn stores _loss as a C-extension; pickle may try to import it as
+# top-level '_loss'. This alias fixes that across sklearn versions.
+try:
+    import sklearn._loss._loss as _loss_ext
+    sys.modules.setdefault('_loss', _loss_ext)
+except Exception:
+    pass
+try:
+    import sklearn._loss.loss as _loss_loss
+    sys.modules.setdefault('sklearn._loss.loss', _loss_loss)
+except Exception:
+    pass
 """
 BugPredictor — Unified inference class (v2)
 Uses: best_defect_model (Ensemble, AUC ~90%) + bug_type_model (RF, Acc 99%)
