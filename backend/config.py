@@ -21,5 +21,14 @@ if os.path.exists(_env_path):
 
 CLAUDE_API_KEY = os.environ.get("CLAUDE_API_KEY", "")
 STRIPE_SECRET_KEY = os.environ.get("STRIPE_SECRET_KEY", "")
+GOOGLE_CLIENT_ID = os.environ.get("GOOGLE_CLIENT_ID", "")
+
+# Optional — password-reset emails. Leave unset in dev: forgot-password then
+# returns the OTP directly in the API response instead of emailing it.
+SMTP_HOST = os.environ.get("SMTP_HOST", "")
+SMTP_PORT = int(os.environ.get("SMTP_PORT", "587"))
+SMTP_USER = os.environ.get("SMTP_USER", "")
+SMTP_PASS = os.environ.get("SMTP_PASS", "")
+SMTP_FROM = os.environ.get("SMTP_FROM", "") or SMTP_USER
 
 os.makedirs(UPLOAD_DIR, exist_ok=True)

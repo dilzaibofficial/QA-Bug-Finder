@@ -27,6 +27,7 @@ def get_db():
         _db.notes.create_index("parent_id")
         _db.subscriptions.create_index([("user_id", 1), ("status", 1)])
         _db.file_activity.create_index([("upload_id", 1), ("created_at", -1)])
+        _db.password_resets.create_index("email", unique=True)
     return _db
 
 
