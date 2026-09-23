@@ -1,0 +1,14 @@
+{
+  "Crash|high": "Critical",
+  "Crash|medium": "High",
+  "Crash|low": "High",
+  "Logical|high": "High",
+  "Logical|medium": "Medium",
+  "Logical|low": "Low",
+  "Performance|high": "High",
+  "Performance|medium": "Medium",
+  "Performance|low": "Low",
+  "UI|high": "Medium",
+  "UI|medium": "Low",
+  "UI|low": "Low"
+}

@@ -1,0 +1,52 @@
+# ── Environment / Secrets (NEVER push these) ──────────────────────────────────
+.env
+.env.local
+.env.production
+*.env
+
+# ── Python ─────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+*.egg
+
+# ── Node / React frontend ──────────────────────────────────────────────────────
+node_modules/
+build/
+.npm
+npm-debug.log*
+
+# ── Backend uploads / user-generated runtime content (not source code) ─────────
+backend/uploads/*
+uploads/*
+!backend/uploads/.gitkeep
+!uploads/.gitkeep
+backend/avatars/
+backend/chat_uploads/
+backend/__runlog.txt
+
+# ── Not part of this deploy — separate repos/projects ───────────────────────────
+bug-detector1_extracted/
+admin/
+
+# ── Large raw training-data dumps — not needed at runtime, only saved_models/ is ─
+dataset1_extracted/
+dataset_2_extracted/
+dataset_extracted/
+
+# ── This tool's own project metadata ─────────────────────────────────────────────
+.claude/
+
+# ── OS files ───────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── IDE ────────────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp

@@ -1,0 +1,26 @@
+Training Complete — Results
+Model 1: XGBoost Defect Predictor
+
+Dataset    : 12,454 Java classes (37 Apache projects)
+AUC        : 87.01%  ← excellent
+Accuracy   : 78.81%
+F1 Score   : 77.15%
+Top features: moa, wmc, dam, ic, cbm, dit
+Model 2: Bug Type Classifier (RandomForest)
+
+Dataset    : 3,200 samples (Defects4J patterns)
+Accuracy   : 99.09%
+F1 Score   : 99.09%
+Classes    : Crash / Logical / Performance / UI
+Test Output — Live se:
+
+PaymentCalculator.java
+  Type      : Logical Bug
+  Severity  : High
+  Line      : 272
+  Confidence: 74.1%
+  Reason    : Cyclomatic complexity (max_cc=18) indicates
+              complex branching; wrong condition introduced
+  Fix       : Refactor methods with CC > 18 into smaller
+              single-responsibility functions
+  Assigned  : Developer

@@ -1,0 +1,110 @@
+{
+  "ck_defect_model": {
+    "auc": 0.8701,
+    "accuracy": 0.7881,
+    "f1": 0.7715,
+    "features": [
+      "wmc",
+      "dit",
+      "noc",
+      "cbo",
+      "rfc",
+      "lcom",
+      "ca",
+      "ce",
+      "npm",
+      "lcom3",
+      "loc",
+      "dam",
+      "moa",
+      "mfa",
+      "cam",
+      "ic",
+      "cbm",
+      "amc",
+      "max_cc",
+      "avg_cc"
+    ],
+    "samples": 17066,
+    "bug_rate": 0.5
+  },
+  "bug_type_model": {
+    "accuracy": 0.9909,
+    "f1": 0.9909,
+    "classes": [
+      "Crash",
+      "Logical",
+      "Performance",
+      "UI"
+    ],
+    "features": [
+      "wmc",
+      "dit",
+      "noc",
+      "cbo",
+      "rfc",
+      "lcom",
+      "loc",
+      "max_cc",
+      "avg_cc",
+      "npm"
+    ],
+    "samples": 3200
+  },
+  "best_defect_model": {
+    "cv_auc": 0.873,
+    "cv_f1": 0.7763,
+    "hold_auc": 0.7465,
+    "hold_f1": 0.5736,
+    "threshold": 0.3644,
+    "features": [
+      "wmc",
+      "dit",
+      "noc",
+      "cbo",
+      "rfc",
+      "lcom",
+      "ca",
+      "ce",
+      "npm",
+      "lcom3",
+      "loc",
+      "dam",
+      "moa",
+      "mfa",
+      "cam",
+      "ic",
+      "cbm",
+      "amc",
+      "max_cc",
+      "avg_cc",
+      "rfc_per_method",
+      "loc_per_method",
+      "cc_per_method",
+      "coupling_density",
+      "cohesion_deficit",
+      "inheritance_depth",
+      "wmc_x_cbo",
+      "loc_x_lcom",
+      "rfc_x_lcom",
+      "dit_x_wmc",
+      "cc_x_wmc",
+      "log_loc",
+      "log_rfc",
+      "log_lcom",
+      "log_wmc"
+    ],
+    "n_features": 35,
+    "samples": 12454,
+    "models": [
+      "XGBoost(400)",
+      "RandomForest(300)",
+      "GradientBoosting(200)"
+    ],
+    "weights": [
+      3,
+      2,
+      2
+    ]
+  }
+}

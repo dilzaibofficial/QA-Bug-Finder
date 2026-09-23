@@ -1,0 +1,16 @@
+[
+  {
+    "bug_id": "BUG-002",
+    "type": "Logical",
+    "severity": "High",
+    "file": "PaymentCalculator.java",
+    "line_number": 272,
+    "description": "Logical bug detected with 74.1% confidence",
+    "ai_reason": "Cyclomatic complexity (max_cc=18) indicates complex branching; a wrong condition was introduced.",
+    "suggested_fix": "Refactor methods with CC > 18 into smaller single-responsibility functions and add unit tests per branch.",
+    "assigned_to": "Developer",
+    "status": "Open",
+    "defect_probability": 0.7406,
+    "type_confidence": 1.0
+  }
+]

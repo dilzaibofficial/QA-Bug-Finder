@@ -1,0 +1,28 @@
+2026-05-21 08:12:01 INFO  Application starting on port 8080
+2026-05-21 08:12:05 INFO  Database connection established
+2026-05-21 08:13:22 ERROR java.lang.NullPointerException at com.bugdetector.service.UserService.findById(UserService.java:45)
+	at com.bugdetector.service.UserService.findById(UserService.java:45)
+	at com.bugdetector.controller.UserController.getUser(UserController.java:89)
+2026-05-21 08:15:44 FATAL java.lang.StackOverflowError at com.bugdetector.util.RecursiveParser.parse(RecursiveParser.java:12)
+	at com.bugdetector.util.RecursiveParser.parse(RecursiveParser.java:12)
+	at com.bugdetector.util.RecursiveParser.parse(RecursiveParser.java:12)
+2026-05-21 08:18:30 ERROR java.lang.ArrayIndexOutOfBoundsException: Index 5 out of bounds for length 3
+	at com.bugdetector.data.ReportGenerator.buildRow(ReportGenerator.java:102)
+2026-05-21 08:20:11 WARN  java.lang.IllegalArgumentException: Invalid date format provided
+	at com.bugdetector.util.DateParser.parse(DateParser.java:67)
+2026-05-21 08:22:55 ERROR java.sql.SQLException: Connection pool exhausted - no available connections
+	at com.bugdetector.db.ConnectionPool.acquire(ConnectionPool.java:33)
+2026-05-21 08:25:00 ERROR java.util.ConcurrentModificationException
+	at com.bugdetector.cache.BugCache.update(BugCache.java:78)
+2026-05-21 08:27:15 WARN  java.lang.NumberFormatException: For input string "null"
+	at com.bugdetector.api.ReportController.getById(ReportController.java:55)
+2026-05-21 08:30:00 FATAL OutOfMemoryError: Java heap space
+	at com.bugdetector.analysis.ModelRunner.loadAll(ModelRunner.java:200)
+2026-05-21 08:33:41 ERROR TimeoutException: Request to ML service timed out after 30000ms
+	at com.bugdetector.ml.PredictorClient.call(PredictorClient.java:88)
+2026-05-21 08:35:02 ERROR java.lang.AssertionError: Expected 200 but got 500
+	at com.bugdetector.test.ApiTest.testLogin(ApiTest.java:44)
+2026-05-21 08:40:00 INFO  Scheduled cleanup completed
+2026-05-21 08:45:22 ERROR java.lang.ClassCastException: Cannot cast String to Integer
+	at com.bugdetector.mapper.BugMapper.map(BugMapper.java:61)
+2026-05-21 08:50:00 INFO  Health check passed
