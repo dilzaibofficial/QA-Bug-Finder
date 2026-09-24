@@ -11,8 +11,6 @@ stripe.api_key = config.STRIPE_SECRET_KEY
 
 billing_bp = Blueprint("billing", __name__)
 
-FRONTEND_URL = "http://localhost:3000"
-
 # Prices are the literal figures requested: 20 / 40 / 100 (USD), with a
 # Pakistani-Rupee equivalent for PK users. Both are real Stripe presentment
 # currencies — verified against this account before shipping.
@@ -136,8 +134,8 @@ def create_checkout_session():
                 "quantity": 1,
             }],
             metadata={"user_id": user_id, "plan": plan_key, "country": country, "currency": currency},
-            success_url=f"{FRONTEND_URL}/bug-plus?session_id={{CHECKOUT_SESSION_ID}}",
-            cancel_url=f"{FRONTEND_URL}/bug-plus?checkout=cancelled",
+            success_url=f"{config.FRONTEND_URL}/bug-plus?session_id={{CHECKOUT_SESSION_ID}}",
+            cancel_url=f"{config.FRONTEND_URL}/bug-plus?checkout=cancelled",
         )
 
         # Pending record so the dashboard has something to reconcile even if

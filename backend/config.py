@@ -23,6 +23,11 @@ CLAUDE_API_KEY = os.environ.get("CLAUDE_API_KEY", "")
 STRIPE_SECRET_KEY = os.environ.get("STRIPE_SECRET_KEY", "")
 GOOGLE_CLIENT_ID = os.environ.get("GOOGLE_CLIENT_ID", "")
 
+# Where Stripe Checkout redirects the browser back to after payment. Must be
+# the real deployed frontend URL in production (e.g. https://qa-bug-finder.
+# vercel.app) — Render never sets this by itself, it has to be added there.
+FRONTEND_URL = os.environ.get("FRONTEND_URL", "http://localhost:3000")
+
 # Optional — password-reset emails. Leave unset in dev: forgot-password then
 # returns the OTP directly in the API response instead of emailing it.
 SMTP_HOST = os.environ.get("SMTP_HOST", "")
