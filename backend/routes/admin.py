@@ -5,6 +5,7 @@ import sys, os, bcrypt, shutil
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 from db import get_db, is_user_verified, push_notification
+from socketio_instance import socketio
 import config
 
 admin_bp = Blueprint("admin", __name__)
@@ -286,6 +287,10 @@ def delete_user(user_id):
         db.history.delete_many({"user_id": user_id, "team_id": None})
         db.analysis.delete_many({"user_id": user_id, "team_id": None})
         db.notes.delete_many({"scope_key": f"personal:{user_id}"})
+
+        # If this user is currently online, kick them out in real time —
+        # their account no longer exists.
+        socketio.emit("force_logout", {"reason": "account_deleted"}, room=f"user:{user_id}")
 
         return jsonify({"message": "User deleted"}), 200
 

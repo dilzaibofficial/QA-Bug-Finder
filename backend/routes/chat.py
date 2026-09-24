@@ -167,6 +167,16 @@ def handle_join(data):
         join_room(cid)
 
 
+# Personal room every logged-in browser tab joins, independent of chat —
+# lets the backend push account-level events (e.g. force logout when an
+# admin deletes the account) straight to that one user, in real time.
+@socketio.on("join_user")
+def handle_join_user(data):
+    uid = data.get("user_id")
+    if uid:
+        join_room(f"user:{uid}")
+
+
 @socketio.on("send_message")
 def handle_send_message(data):
     db = get_db()
